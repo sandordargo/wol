@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="sender">Picu</string>
+	<string name="settings_menu">Settings</string>
+	<string name="app_name">Words of Love</string>
+	<string name="main_empty_list">There is no recent conversation, write new message
+		to start one.</string>
+	<string name="insert_new_phrase">Insert new phrase</string>
+	<string name="set_sender">How do you want to call me?</string>
+	<string name="is_on_in_background">Do you want me to text you?</string>
+
+</resources>

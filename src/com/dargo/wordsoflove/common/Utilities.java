@@ -1,0 +1,34 @@
+package com.dargo.wordsoflove.common;
+
+import java.util.Random;
+
+public class Utilities 
+{
+	public final static String kMsgSendFrequency 		= 	"MsgSendFrequency"; 
+	public final static String BACKGROUNFSERVICE 	= 	"ISBACKGROUNDSERVICEON";
+	public final static String PREFS_NAME 	= 	"WoLPrefFile";
+	public final static int kDefaultMsgSendFrequency	=	240;
+	
+	/**
+	 * Returns a pseudo-random number between min and max, inclusive.
+	 * The difference between min and max can be at most
+	 * <code>Integer.MAX_VALUE - 1</code>.
+	 *
+	 * @param min Minimum value
+	 * @param max Maximum value.  Must be greater than min.
+	 * @return Integer between min and max, inclusive.
+	 * @see java.util.Random#nextInt(int)
+	 */
+	public static int randInt(int min, int max) {
+
+	    // Usually this can be a field rather than a method variable
+	    Random rand = new Random();
+
+	    // nextInt is normally exclusive of the top value,
+	    // so add 1 to make it inclusive
+	    int randomNum = rand.nextInt((max - min) + 1) + min;
+
+	    return randomNum;
+	}
+
+}

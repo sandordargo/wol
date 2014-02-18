@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dargo.wordsoflove"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/wol_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.dargo.wordsoflove.activities.MessageActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dargo.wordsoflove.activities.SettingsMenu"
+            android:label="InsertNewRow" 
+            android:parentActivityName="com.dargo.wordsoflove.activities.MessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dargo.wordsoflove.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.dargo.wordsoflove.activities.InsertPhrase"
+            android:label="InsertPhrase" 
+            android:parentActivityName="com.dargo.wordsoflove.activities.SettingsMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dargo.wordsoflove.SettingsMenu" />
+        </activity>
+        <activity
+            android:name="com.dargo.wordsoflove.activities.SetSender"
+            android:label="InsertPhrase" 
+            android:parentActivityName="com.dargo.wordsoflove.activities.SettingsMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dargo.wordsoflove.SettingsMenu" />
+        </activity>
+        
+        <service android:name=".activities.MyAlarmService"
+                 android:enabled="true" />
+         
+        <receiver android:name=".activities.MyReceiver"/>
+    
+        
+    </application>
+
+</manifest>
